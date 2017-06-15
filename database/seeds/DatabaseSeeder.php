@@ -14,53 +14,57 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $categories =['category1','category2','category3','category4','category5'];
-         $categoryLength = count($categories);
+
+        $jobs = [
+            [
+                'name'=>'constructor',
+                'location'=>'Balti',
+                'content'=>'dsfsdfsdf',
+                'time' =>'12.10.2017'
+            ],
+            [
+                'name'=>'programist',
+                'location'=>'Chisinau',
+                'content'=>'dsfsffffffdfsdf',
+                'time' =>'12.10.2017'
+            ],
+            [
+                'name'=>'teacher',
+                'location'=>'Razina',
+                'content'=>'dsfsffffffdfsdf',
+                'time' =>'12.10.2017'
+            ],
+            [
+                'name'=>'manedger',
+                'location'=>'Falesti',
+                'content'=>'dsfsddd123213dfsdf',
+                'time' =>'02.12.2017'
+            ],
+            [
+                'name'=>'administrator',
+                'location'=>'Straseni',
+                'content'=>'dsfsd12312312dd123213dfsdf',
+                'time' =>'02.02.2017'
+            ]
+        ];
+
         $categoryEntities = [];
-        for($cnt = 0;$cnt==$categoryLength; $cnt++){
-            $categoryEntities[] = new Category();
-        }
         foreach($categories as $category){
+            $categoryEntity= new Category;
+            $categoryEntity->setName($category);
+            EntityManager::persist($categoryEntity);
+            $categoryEntities[] = $categoryEntity;
+        }
 
-    }
-
-
-
-        $category1 = new Category();
-        $category1->setName('Category 1');
-        EntityManager::persist($category1);
-
-        $category2 = new Category();
-        $category2->setName('Category 2');
-        EntityManager::persist($category2);
-
-        $category3 = new Category();
-        $category3->setName('Category 3');
-        EntityManager::persist($category3);
-
-        $category4 = new Category();
-        $category4->setName('Category 4');
-        EntityManager::persist($category4);
-
-        $category5 = new Category();
-        $category5->setName('Category 5');
-        EntityManager::persist($category5);
-
-        $job1 = new Job();
-        $job1->setName('constructor');
-        $job1->setLocation('dfsdfd');
-        $job1->setDate(new DateTime());
-        $job1->setContent('vgsdgpsdgpsdgfff');
-        $job1->setCategory($category1);
-        EntityManager::persist($job1);
-
-        $job1 = new Job();
-        $job1->setName('constructor');
-        $job1->setLocation('dfsdfd');
-        $job1->setDate(new DateTime());
-        $job1->setContent('vgsdgpsdgpsdgfff');
-        $job1->setCategory($category1);
-        EntityManager::persist($job1);
-
+        foreach($jobs as $job){
+            $jobEntity = new Job;
+            $jobEntity->setName($job['name']);
+            $jobEntity->setLocation($job['location']);
+            $jobEntity->setDate(new DateTime());
+            $jobEntity->setContent($job['content']);
+            $jobEntity->setCategory( $categoryEntities[array_rand($categoryEntities)]);
+            EntityManager::persist($jobEntity);
+        }
 
         EntityManager::flush();
     }
