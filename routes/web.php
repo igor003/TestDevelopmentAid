@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'JobController@get_name')->name('home');
+Route::get('/', function)->name('home');
+
+
