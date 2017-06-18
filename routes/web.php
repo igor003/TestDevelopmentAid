@@ -11,7 +11,11 @@
 |
 */
 
-Route::get('/', 'JobController@get_name')->name('home');
-Route::get('/', function)->name('home');
+Route::get('/', 'JobController@index')->name('home');
+Route::post('/get_jobs', 'JobController@get_jobs')->name('get_jobs');
+//Route::get('/', 'JobController@get_location')->name('home');
+//Route::get('/', function(){
+//   return view('welcome');
+//});
 
 

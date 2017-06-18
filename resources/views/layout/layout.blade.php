@@ -7,13 +7,14 @@
 
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{asset('css/style.css') }}" rel="stylesheet">
     <!--Jquery -->
     <script src="{{asset('bower/jquery/dist/jquery.min.js')}}"></script>
     <!--Bootstrap css -->
     <link href="{{asset('bower/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
     <!--Bootstrap js -->
-    <script src="{{ asset('bower/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('bower/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 </head>
 <body>
 @section('navbar');

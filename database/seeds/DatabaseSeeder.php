@@ -17,31 +17,31 @@ class DatabaseSeeder extends Seeder
 
         $jobs = [
             [
-                'name'=>'constructor',
+                'name'=>'Constructor',
                 'location'=>'Balti',
                 'content'=>'dsfsdfsdf',
                 'time' =>'12.10.2017'
             ],
             [
-                'name'=>'programist',
+                'name'=>'Programist',
                 'location'=>'Chisinau',
                 'content'=>'dsfsffffffdfsdf',
                 'time' =>'12.10.2017'
             ],
             [
-                'name'=>'teacher',
+                'name'=>'Teacher',
                 'location'=>'Razina',
                 'content'=>'dsfsffffffdfsdf',
                 'time' =>'12.10.2017'
             ],
             [
-                'name'=>'manedger',
+                'name'=>'Manedger',
                 'location'=>'Falesti',
                 'content'=>'dsfsddd123213dfsdf',
                 'time' =>'02.12.2017'
             ],
             [
-                'name'=>'administrator',
+                'name'=>'Administrator',
                 'location'=>'Straseni',
                 'content'=>'dsfsd12312312dd123213dfsdf',
                 'time' =>'02.02.2017'
