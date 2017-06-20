@@ -2,7 +2,9 @@
   "name": "blue-leaf",
   "description": "Physics-like animations for pretty particles",
   "main": [],
-  "dependencies": {},
+  "dependencies": {
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47"
+  },
   "devDependencies": {
     "jquery": "^3.2.1",
     "bootstrap": "^3.3.7"

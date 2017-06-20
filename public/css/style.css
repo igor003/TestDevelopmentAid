@@ -20,6 +20,34 @@
     color: silver;
     margin-right:10px;
 }
+
+.job > .categoryspan{
+    font-size: 12px;
+    color: silver;
+    margin-right:10px;
+}
+/*loader*/
+.loader {
+    border: 6px solid #191bf3; /* Light grey */
+    border-top: 6px solid #050403; /* Black */
+    border-radius: 50%;
+    width:50px;
+    height:50px;
+    margin:auto;
+    position:absolute;
+    top:30px;
+    left:30%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+ /*DATApiker  */
+
 .form-group input[type="checkbox"] {
     display: none;
 }

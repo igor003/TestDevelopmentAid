@@ -12,8 +12,12 @@
     <!--Jquery -->
     <script src="{{asset('bower/jquery/dist/jquery.min.js')}}"></script>
     <!--Bootstrap css -->
+    <link rel="stylesheet" href="{{asset('bower/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css')}}" />
+    <link  href="{{asset('bower/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet" />
+    <script  src="{{asset('bower/moment/min/moment.min.js')}}"></script>
     <link href="{{asset('bower/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
     <!--Bootstrap js -->
+    <script  src="{{asset('bower/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js')}}"></script>
     <script src="{{asset('bower/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 </head>
 <body>
@@ -26,17 +30,10 @@
                 <li class=""><a href="#">Link <span class="sr-only"></span></a></li>
                 <li><a href="#">Link</a></li>
             </ul>
-            <form class="navbar-form navbar-right">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
+
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
-
 </nav>
-
 @show
 @section('content');
 
