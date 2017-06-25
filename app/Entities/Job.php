@@ -36,7 +36,7 @@ class Job
      */
     protected $content;
     /**
-     * @ORM\ManyToOne(targetEntity="Category", inversedBy="jobs")
+     * @ORM\ManyToOne(targetEntity="App\Entities\Category", inversedBy="jobs")
      */
     protected $category;
 

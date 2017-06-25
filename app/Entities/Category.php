@@ -23,10 +23,10 @@ class Category
      */
     protected $name;
 
-//    /**
-//     * @ORM\OneToMany(targetEntity="App\Entities\Job", mappedBy="category")
-//     */
-//    protected $jobs;
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entities\Job", mappedBy="category")
+     */
+    protected $jobs;
 
     /**
      * @return mixed

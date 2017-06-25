@@ -13,6 +13,7 @@
     font-size: 12px;
     color: silver;
     margin-right:10px;
+    margin-right:30%;
 }
 
 .job > .pub{
@@ -28,21 +29,38 @@
 }
 /*loader*/
 .loader {
-    border: 6px solid #191bf3; /* Light grey */
-    border-top: 6px solid #050403; /* Black */
+    border: 6px solid #f3dd00;
+    border-top: 6px solid #4a4c4e;
     border-radius: 50%;
     width:50px;
     height:50px;
     margin:auto;
     position:absolute;
-    top:30px;
-    left:30%;
+    top:80px;
+    left:35%;
     animation: spin 2s linear infinite;
+}
+.page-link:hover{
+     cursor:pointer;
 }
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+.details-content{
+    margin-top:100px;
+    font-size:1.5em;
+    font-family: Calibri Light;
+}
+.details-name{
+    font-family: Calibri Light;
+    font-weight: bold;
+}
+.details-record{
+    font-family: Calibri Light;
+    margin:5px;
+    font-size:1.2em;
 }
 
 

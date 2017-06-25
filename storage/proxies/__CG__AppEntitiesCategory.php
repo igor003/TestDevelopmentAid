@@ -64,10 +64,10 @@ class Category extends \App\Entities\Category implements \Doctrine\ORM\Proxy\Pro
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', 'id', 'name'];
+            return ['__isInitialized__', 'id', 'name', 'jobs'];
         }
 
-        return ['__isInitialized__', 'id', 'name'];
+        return ['__isInitialized__', 'id', 'name', 'jobs'];
     }
 
     /**

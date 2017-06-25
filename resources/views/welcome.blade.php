@@ -3,52 +3,6 @@
 @yield('navbar')
 
 @section('content')
-    <script>
-        function getJobs(){
-            $.ajax({
-                url:'{{route('get_jobs')}}', // url where to submit the request
-                type : "POST", // type of action POST || GET
-                dataType : 'json', // data type
-                data : $(".form").serialize(),
-                beforeSend: function() {
-                    $('.loader').show();
-                },
-                complete: function() {
-                    $('.loader').hide();
-                },
-                success : function(result) {
-                    console.log(result);
-                    // you can see the result from the console
-                    // tab of the developer tools
-                    $("#job").html('');
-                    for($cnt = 0;$cnt< result.length;$cnt++){
-                        $("#job").append(
-                                "<div class='job row'>" +
-                                "<h4><a href=''>"+result[$cnt].name+"</a></h4>" +
-                                "<div class='content'>"+result[$cnt].content.substr(0,140)+"...</div>"  +
-                                "<span class='loc pull-left'>Location:"+result[$cnt].location+"</span> " +
-                                "<span class='categoryspan pull-left'>Category:"+result[$cnt].category.name+"</span> " +
-                                "<span class='pub pull-right'>Publication date:"+result[$cnt].date.date+"</span>" +
-                                " </div>"
-                        )
-                    }
-                },
-                error: function(xhr, resp, text) {
-                    console.log(xhr, resp, text);
-                }
-            });
-        }
-        $(document).ready(function(){
-            getJobs();
-            $('.formChek').change(getJobs);
-            $('.datepicker').datetimepicker({
-                format: 'YYYY-MM-DD'
-            }).on('dp.change',getJobs);
-        });
-
-    </script>
-
-
     <div class="container">
         <div class="loader"></div>
         <div class="row">
@@ -56,7 +10,7 @@
 
             </div>
             <div class="col-xs-3">
-                <form action="" class="form">
+                <form action="{{route('get_jobs')}}" class="form">
                     {{ csrf_field() }}
                     <div class="search">
                         <div class="form-group">
@@ -103,12 +57,14 @@
                         <input name="dateFrom" class="formChek datepicker form-control" id="from" type="text">
                         <label for="do">Until</label>
                         <input name="dateUntil" class="formChek datepicker form-control" id="before" type="text">
+
                     </div>
+                    <input id="curPage" value="1" name="curPage" type="hidden">
                 </form>
+            </div>
+            <div id="pagination" class=" text-center">
+
             </div>
         </div>
     </div>
-    <script>
-
-    </script>
 @endsection

@@ -19,22 +19,23 @@
     <!--Bootstrap js -->
     <script  src="{{asset('bower/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js')}}"></script>
     <script src="{{asset('bower/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+    <!--Scripts-->
+    <script src="{{asset('js/main.js')}}"></script>
 </head>
 <body>
-@section('navbar');
+
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class=""><a href="#">Link <span class="sr-only"></span></a></li>
-                <li><a href="#">Link</a></li>
+                <li class=""><a href="{{route('home')}}">Home <span class="sr-only"></span></a></li>
             </ul>
 
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-@show
+
 @section('content');
 
 @show
